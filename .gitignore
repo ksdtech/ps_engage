@@ -5,6 +5,10 @@ __pycache__/
 # C extensions
 *.so
 
+# Data files
+output/*.csv
+source/*.txt
+
 # Distribution / packaging
 .Python
 env/
