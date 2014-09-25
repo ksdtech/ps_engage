@@ -1,5 +1,14 @@
+Usage
+-----
 
-Export Student records with following fields
+$ python engage_sync.py
+
+Data Files
+----------
+
+There are 7 input files required
+
+1. Export Student records into source/students.txt with following fields
 
 Student_Number
 SchoolID
@@ -18,7 +27,7 @@ Father_First
 Father
 Father_Email
 
-Export Teacher records with following fields
+2. Export Teacher records into source/teachers.txt with following fields
 
 TeacherNumber
 First_Name
@@ -26,7 +35,7 @@ Last_Name
 SchoolID
 Email_Addr
 
-Export Course records with following fields
+3. Export Course records into source/courses.txt with following fields
 
 SchoolID
 Course_Name
@@ -34,7 +43,7 @@ Course_Number
 Alt_Course_Number
 Code
 
-Export Section records with following fields
+4. Export Section records into source/sections.txt with following fields
 
 SchoolID
 Course_Number
@@ -46,7 +55,7 @@ TermID
 Expression
 [05]TeacherNumber
 
-Export CC records with following fields
+5. Export CC records into source/cc.txt with following fields
 
 Course_Number
 Section_Number
@@ -60,3 +69,29 @@ Expression
 [01]Last_Name
 [05]TeacherNumber
 [05]Last_Name
+
+6. Create source/codes.txt with columns
+
+SchoolID
+Course_Name
+Course_Number
+Teacher_Id
+Teacher_Name
+Code
+
+Example:
+
+SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
+104	Academic Workshop 	9971	T104128	Anderson	AWKS-AND
+
+7. Create source/edline\_classes.txt with columns
+
+SchoolID
+Code (Edline ClassID)
+
+Example:
+
+Code  ClassID
+104   AWKS-HET
+
+
