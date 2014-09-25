@@ -175,7 +175,6 @@ class EngageUploader(object):
                     student_email += '@kentstudents.org'
                 mother_email = student_data['Mother_Email']
                 father_email = student_data['Father_Email']
-                father_email = 'webmaster@kentfieldschools.org'
                 w.writerow([school_id, student_id, last_name, first_name,
                     student_email, '', '', '',
                     mother_email, father_email, '', '',
