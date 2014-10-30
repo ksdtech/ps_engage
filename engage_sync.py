@@ -48,7 +48,10 @@ TEACHER_HEADERS = [
     'First_Name',
     'Last_Name',
     'SchoolID',
-    'Email_Addr'
+    'Email_Addr',
+    'Status',
+    'StaffStatus',
+    'CA_SEID'
 ]
 
 COURSE_HEADERS = [
@@ -184,6 +187,7 @@ class EngageUploader(object):
             teachers = csv.DictReader(f, fieldnames=fieldnames, dialect='excel-tab', lineterminator='\n')
             for row in teachers:
                 teacher_id = 'T' + row['TeacherNumber']
+                row.update({'Marked': 0})
                 self.teachers[teacher_id] = row
 
     def loadCourses(self, school_name):
@@ -202,11 +206,18 @@ class EngageUploader(object):
                 school_id = row['SchoolID']
                 course_number = row['Course_Number']
                 section_number = row['Section_Number']
-                section_id = '.'.join((school_id, course_number, section_number))
-                self.sections[section_id] = row
                 teacher_id = 'T' + row['[05]TeacherNumber']
-                course_teacher_id = '.'.join((school_id, course_number, teacher_id))
-                self.course_teachers[course_teacher_id] = 1
+                if teacher_id in self.teachers:
+                    if self.teachers[teacher_id]['Status'] == '1':
+                        self.teachers[teacher_id]['Marked'] = 1
+                        section_id = '.'.join((school_id, course_number, section_number))
+                        self.sections[section_id] = row
+                        course_teacher_id = '.'.join((school_id, course_number, teacher_id))
+                        self.course_teachers[course_teacher_id] = 1
+                    else:
+                        print "section %s.%s (%s): teacher %s is not active" % (course_number, section_number, school_id, teacher_id)
+                else:
+                    print "section %s.%s (%s): missing teacher %s" % (course_number, section_number, school_id, teacher_id)
                 
     def loadEnrollments(self):
         with open(os.path.join(self.source_dir, 'cc.txt')) as f:
@@ -255,10 +266,11 @@ class EngageUploader(object):
             w = csv.writer(f, dialect='excel', lineterminator='\r\n')
             w.writerow(['ID', 'LastName', 'FirstName', 'GradeLevel', 'SchoolId'])
             for teacher_id, teacher_data in self.teachers.iteritems():
-                school_id = teacher_data['SchoolID']
-                last_name = teacher_data['Last_Name']
-                first_name = teacher_data['First_Name']
-                w.writerow([teacher_id, last_name, first_name, '', school_id])        
+                if teacher_data['Status'] == '1':
+                    school_id = teacher_data['SchoolID']
+                    last_name = teacher_data['Last_Name']
+                    first_name = teacher_data['First_Name']
+                    w.writerow([teacher_id, last_name, first_name, '', school_id])        
         
     def writeStudentsFile(self):
         with open(os.path.join(self.output_dir, 'students.csv'), 'w') as f:
