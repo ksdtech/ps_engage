@@ -16,6 +16,8 @@ DO_NOT_ENROLL = [
     '104.ART', '104.ART5', '104.ART6', '104.ART78',
     # PE 5, PE 6, PE 7, PE 8 - Mr. Gillespie, Mr. Kelly, Ms. Chase and Ms. Fox]
     '104.PE', '104.PE5', '104.PE6', '104.PE7', '104.PE8',
+    # any bacich classes
+    '103.*'
 ]
 
 DAYS_PAST = 7
@@ -104,14 +106,37 @@ class EngageUploader(object):
         self.effectiveDate = effective_date
         self.loadCodes()
         self.loadStudents()
-        self.loadTeachers()
-        self.loadCourses()
-        self.loadSections()
+        self.loadTeachers('bacich')
+        self.loadTeachers('kent')
+        self.loadCourses('bacich')
+        self.loadCourses('kent')
+        self.loadSections('bacich')
+        self.loadSections('kent')
         self.loadEnrollments()
         
-    def getEdlineClassId(self, school_id, course_number, teacher_id):
+    def excludeFromEnrollment(self, school_class_id):
+        for ex in DO_NOT_ENROLL:
+            if ex == school_class_id:
+                return True
+            if ex[-2:1] == '.*':
+                school_id, class_id = school_class_id.split('.')
+                test_school = ex[0:-2]
+                if school_id == test_school:
+                    return True
+        return False    
+        
+    def getEdlineClassInfo(self, school_id, course_number, teacher_id):
+        class_id = ''
+        class_name = ''
+        enroll = False
         code_id = '.'.join((school_id, course_number, teacher_id))
-        return self.codes.get(code_id)
+        class_tuple = self.codes.get(code_id)
+        if class_tuple:
+            class_id = class_tuple[0]
+            enroll = class_tuple[1]
+            school_class_id = '.'.join((school_id, class_id))
+            class_name = self.valid_codes.get(school_class_id)
+        return (class_id, class_name, enroll)
 
     def getTeacherName(self, teacher_id):
         teacher_data = self.teachers.get(teacher_id)
@@ -124,10 +149,12 @@ class EngageUploader(object):
             codes = csv.DictReader(f, dialect='excel-tab', lineterminator='\n')
             for row in codes:
                 class_id =  row['Code']
-                if class_id:
+                class_name = row['Name']
+                if class_id and class_name:
                     school_id = row['SchoolID']
                     school_class_id = '.'.join((school_id, class_id))
-                    self.valid_codes[school_class_id] = 1
+                    self.valid_codes[school_class_id] = class_name
+                    
         with open(os.path.join(self.source_dir, 'codes.txt')) as f:
             codes = csv.DictReader(f, dialect='excel-tab', lineterminator='\n')
             for row in codes:
@@ -137,11 +164,11 @@ class EngageUploader(object):
                     school_class_id = '.'.join((school_id, class_id))
                     if school_class_id not in self.valid_codes:
                         raise Exception('invalid code %s' % school_class_id)
-                    if not school_class_id in DO_NOT_ENROLL:
-                        course_number = row['Course_Number']
-                        teacher_id = row['Teacher_Id']
-                        code_id = '.'.join((school_id, course_number, teacher_id))
-                        self.codes[code_id] = class_id
+                    enroll = not self.excludeFromEnrollment(school_class_id)
+                    course_number = row['Course_Number']
+                    teacher_id = row['Teacher_Id']
+                    code_id = '.'.join((school_id, course_number, teacher_id))
+                    self.codes[code_id] = (class_id, enroll)
     
     def loadStudents(self):
         with open(os.path.join(self.source_dir, 'students.txt')) as f:
@@ -151,24 +178,24 @@ class EngageUploader(object):
                 student_id = 'S' + row['Student_Number']
                 self.students[student_id] = row
 
-    def loadTeachers(self):
-        with open(os.path.join(self.source_dir, 'teachers.txt')) as f:
+    def loadTeachers(self, school_name):
+        with open(os.path.join(self.source_dir, 'teachers-%s.txt' % school_name)) as f:
             fieldnames = None if not self.autosend else TEACHER_HEADERS
             teachers = csv.DictReader(f, fieldnames=fieldnames, dialect='excel-tab', lineterminator='\n')
             for row in teachers:
                 teacher_id = 'T' + row['TeacherNumber']
                 self.teachers[teacher_id] = row
 
-    def loadCourses(self):
-        with open(os.path.join(self.source_dir, 'courses.txt')) as f:
+    def loadCourses(self, school_name):
+        with open(os.path.join(self.source_dir, 'courses-%s.txt' % school_name)) as f:
             fieldnames = None if not self.autosend else COURSE_HEADERS
             courses = csv.DictReader(f, fieldnames=fieldnames, dialect='excel-tab', lineterminator='\n')
             for row in courses:
                 course_number = row['Course_Number']
                 self.courses[course_number] = row
 
-    def loadSections(self):
-        with open(os.path.join(self.source_dir, 'sections.txt')) as f:
+    def loadSections(self, school_name):
+        with open(os.path.join(self.source_dir, 'sections-%s.txt' % school_name)) as f:
             fieldnames = None if not self.autosend else SECTION_HEADERS
             sections = csv.DictReader(f, fieldnames=fieldnames, dialect='excel-tab', lineterminator='\n')
             for row in sections:
@@ -192,8 +219,8 @@ class EngageUploader(object):
                     school_id = row['SchoolID']
                     course_number = row['Course_Number']
                     teacher_id = 'T' + row['[05]TeacherNumber']
-                    class_id = self.getEdlineClassId(school_id, course_number, teacher_id)
-                    if class_id:
+                    class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, teacher_id)
+                    if class_id and enroll:
                         student_id = 'S' + row['[01]Student_Number']
                         section_number = row['Section_Number']
                         enrollment_id = '.'.join((school_id, class_id, student_id, course_number, section_number, teacher_id))
@@ -202,13 +229,13 @@ class EngageUploader(object):
     def dumpAllCourses(self):
         f = sys.stdout
         w = csv.writer(f, dialect='excel-tab', lineterminator='\n')
-        w.writerow(['course_name', 'course_number', 'teacher_id', 'teacher_name', 'code'])
+        w.writerow(['course_name', 'course_number', 'teacher_id', 'teacher_name', 'code', 'name', 'enroll'])
         for course_teacher_id in self.course_teachers:
             school_id, course_number, teacher_id = course_teacher_id.split('.')
             course_name = self.courses[course_number]['Course_Name']
             teacher_name = self.getTeacherName(teacher_id)
-            class_id = self.getEdlineClassId(school_id, course_number, teacher_id)
-            w.writerow([course_name, course_number, teacher_id, teacher_name, class_id])        
+            class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, teacher_id)
+            w.writerow([course_name, course_number, teacher_id, teacher_name, class_id, class_name, enroll])        
                         
     def dumpActiveEnrollments(self):
         f = sys.stdout
@@ -223,6 +250,16 @@ class EngageUploader(object):
             term = section_data['[13]Abbreviation']
             w.writerow([course_name, course_number, section_number, teacher_id, teacher_name, class_id, student_id])        
 
+    def writeTeachersFile(self):
+        with open(os.path.join(self.output_dir, 'teachers.csv'), 'w') as f:
+            w = csv.writer(f, dialect='excel', lineterminator='\r\n')
+            w.writerow(['ID', 'LastName', 'FirstName', 'GradeLevel', 'SchoolId'])
+            for teacher_id, teacher_data in self.teachers.iteritems():
+                school_id = teacher_data['SchoolID']
+                last_name = teacher_data['Last_Name']
+                first_name = teacher_data['First_Name']
+                w.writerow([teacher_id, last_name, first_name, '', school_id])        
+        
     def writeStudentsFile(self):
         with open(os.path.join(self.output_dir, 'students.csv'), 'w') as f:
             w = csv.writer(f, dialect='excel', lineterminator='\r\n')
@@ -232,7 +269,7 @@ class EngageUploader(object):
                 last_name = student_data['Last_Name']
                 first_name = student_data['First_Name']
                 grade_level = student_data['Grade_Level']
-                w.writerow([student_id, last_name, first_name, grade_level, school_id])
+                w.writerow([student_id, last_name, first_name, grade_level, school_id])        
                 
     def writeStudentContactsFile(self):
         with open(os.path.join(self.output_dir, 'contacts.csv'), 'w') as f:
@@ -257,6 +294,20 @@ class EngageUploader(object):
                     '', '', '', '',
                     '', '', '', '' ])
             
+    def writeClassesFile(self):
+        seen_classes = { }
+        with open(os.path.join(self.output_dir, 'classes.csv'), 'w')  as f:
+            w = csv.writer(f, dialect='excel', lineterminator='\r\n')
+            w.writerow(['ClassID', 'Class Name', 'TeacherID', 'SchoolId'])
+            for course_teacher_id in self.course_teachers:
+                school_id, course_number, teacher_id = course_teacher_id.split('.')
+                class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, teacher_id)
+                if class_id:
+                    school_class_id = '.'.join((school_id, class_id))
+                    if not school_class_id in seen_classes:
+                        w.writerow([class_id, class_name, teacher_id, school_id])
+                        seen_classes[school_class_id] = 1
+
     def writeSchedulesFile(self):
         with open(os.path.join(self.output_dir, 'schedules.csv'), 'w')  as f:
             w = csv.writer(f, dialect='excel', lineterminator='\r\n')
@@ -285,6 +336,8 @@ if __name__ == '__main__':
         uploader.dumpAllCourses()
         uploader.dumpActiveEnrollments()
     else:
+        uploader.writeTeachersFile()
+        uploader.writeClassesFile()
         uploader.writeStudentsFile()
         uploader.writeStudentContactsFile()
         uploader.writeSchedulesFile()
