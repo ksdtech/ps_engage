@@ -187,7 +187,7 @@ class EngageUploader(object):
             teachers = csv.DictReader(f, fieldnames=fieldnames, dialect='excel-tab', lineterminator='\n')
             for row in teachers:
                 teacher_id = 'T' + row['TeacherNumber']
-                row.update({'Marked': 0})
+                row.update({'Assigned': '0'})
                 self.teachers[teacher_id] = row
 
     def loadCourses(self, school_name):
@@ -209,7 +209,7 @@ class EngageUploader(object):
                 teacher_id = 'T' + row['[05]TeacherNumber']
                 if teacher_id in self.teachers:
                     if self.teachers[teacher_id]['Status'] == '1':
-                        self.teachers[teacher_id]['Marked'] = 1
+                        self.teachers[teacher_id]['Assigned'] = '1'
                         section_id = '.'.join((school_id, course_number, section_number))
                         self.sections[section_id] = row
                         course_teacher_id = '.'.join((school_id, course_number, teacher_id))
@@ -266,7 +266,7 @@ class EngageUploader(object):
             w = csv.writer(f, dialect='excel', lineterminator='\r\n')
             w.writerow(['ID', 'LastName', 'FirstName', 'GradeLevel', 'SchoolId'])
             for teacher_id, teacher_data in self.teachers.iteritems():
-                if teacher_data['Status'] == '1':
+                if teacher_data['Assigned'] == '1':
                     school_id = teacher_data['SchoolID']
                     last_name = teacher_data['Last_Name']
                     first_name = teacher_data['First_Name']
