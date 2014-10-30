@@ -1,0 +1,7 @@
+#!/bin/bash
+
+PYTHON="/Library/Frameworks/Python.framework/Versions/2.7/bin/python"
+FTP_EDLINE_ROOT="/Volumes/kweb-d0-content/webapps-root/psftp/edline"
+
+cd /Volumes/kweb-d0-content/webapps-root/ps_engage
+$PYTHON engage_sync.py --autosend --source_dir="${FTP_EDLINE_ROOT}" --output_dir="${FTP_EDLINE_ROOT}/output"
