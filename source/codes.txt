@@ -99,6 +99,7 @@ SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
 104	Mathematics 6	6100	T104132	Widelock	MATH6-WID
 104	Mathematics 7	7100	T104132	Widelock	MATH7-WID
 104	Mathematics 7	7100	T104025	Hettleman	MATH7-HET
+104	Mathematics 7	7100	T104178	Lentini	MATH7-LEN
 104	Mathematics 8	8102	T104101	Thelen	MATH8
 104	Mathletes	9895	T104178	Lentini	
 104	Nest 5	9991	T104387	Gallagher	
