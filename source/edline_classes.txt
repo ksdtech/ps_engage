@@ -46,11 +46,10 @@ SchoolID	Code	Name
 104	MATH6-LEN	Mathematics 6 - Lentini
 104	MATH6-WID	Mathematics 6 - Widelock
 104	MATH7-HET	Mathematics 7 - Hettleman
-104	MATH7-LEN	Mathematics 7 - Lentini
 104	MATH7-WID	Mathematics 7 - Widelock
 104	MATH8	Mathematics 8 - Thelen
 104	MATHX	Extended Math
-104	MSCI5-AYR	Math/Science Core 5 - Ayres
+104	MSCI5-CHU	Math/Science Core 5 - Chusid
 104	MSCI5-GAL	Math/Science Core 5 - Gallagher
 104	MSCI5-KLI	Math/Science Core 5 - Klima
 104	PALG7	Math 7+ - Lentini

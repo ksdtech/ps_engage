@@ -28,7 +28,7 @@ SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
 104	Advisory	9993	T104150	Martinez	
 104	Advisory	9993	T104128	Anderson	
 104	Advisory/Nest	9996	T104122	Hagan	
-104	Advisory/Nest	9996	T104393	Ayres	
+104	Advisory/Nest	9996	T104165	Chusid	
 104	Advisory/Nest	9996	T104048	Klima	
 104	Advisory/Nest	9996	T104161	Wells	
 104	Advisory/Nest	9996	T104387	Gallagher	
@@ -92,20 +92,19 @@ SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
 104	Learning Center Support 	5999	T104065	Whitehouse	LRNC
 104	Life Skills 6	6841	T104163	Bridges	LIFE
 104	Math/Science Core 5	5102	T104048	Klima	MSCI5-KLI
-104	Math/Science Core 5	5102	T104393	Ayres	MSCI5-AYR
+104	Math/Science Core 5	5102	T104165	Chusid	MSCI5-CHU
 104	Math/Science Core 5	5102	T104387	Gallagher	MSCI5-GAL
 104	Math+ 7	7177	T104178	Lentini	PALG7
 104	Mathematics 6	6100	T104178	Lentini	MATH6-LEN
 104	Mathematics 6	6100	T104132	Widelock	MATH6-WID
 104	Mathematics 7	7100	T104132	Widelock	MATH7-WID
 104	Mathematics 7	7100	T104025	Hettleman	MATH7-HET
-104	Mathematics 7	7100	T104178	Lentini	MATH7-LEN
 104	Mathematics 8	8102	T104101	Thelen	MATH8
 104	Mathletes	9895	T104178	Lentini	
 104	Nest 5	9991	T104387	Gallagher	
 104	Nest 5	9991	T104162	Jelen	
 104	Nest 5	9991	T104161	Wells	
-104	Nest 5	9991	T104393	Ayres	
+104	Nest 5	9991	T104165	Chusid	
 104	Nest 5	9991	T104048	Klima	
 104	Nest 5	9991	T104122	Hagan	
 104	Opportunities/SR	9995	T104128	Anderson	
