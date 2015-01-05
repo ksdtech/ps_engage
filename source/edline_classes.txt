@@ -53,10 +53,8 @@ SchoolID	Code	Name
 104	MSCI5-GAL	Math/Science Core 5 - Gallagher
 104	MSCI5-KLI	Math/Science Core 5 - Klima
 104	PALG7	Math 7+ - Lentini
-104	PE5	PE 5
-104	PE6	PE 6
-104	PE7	PE 7
-104	PE8	PE 5/7/8 - Kelly
+104	PE6	PE 6 - Gillespie
+104	PE8	PE 8/7/5 - Kelly
 104	POET8	Poetry 8
 104	READX	Extended Reading
 104	ROBT5	Robotics 5
