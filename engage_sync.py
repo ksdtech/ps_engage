@@ -6,14 +6,8 @@ import os
 import sys
 
 DO_NOT_ENROLL = [ 
-    # Film Making 7/8 - Ms. Brundige (iWeb)
-    '104.FILM78',
-    # History 8 - Mr. Palmer (Google Sites)
-    '104.HIST8',
     # Art 5, Art 6, Art 7/8 - Ms. Montgomery (iWeb)
     '104.ART', '104.ART5', '104.ART6', '104.ART78',
-    # PE 5, PE 6, PE 7, PE 8 - Mr. Gillespie, Mr. Kelly, Ms. Chase and Ms. Fox]
-    '104.PE', '104.PE5', '104.PE6', '104.PE7', '104.PE8',
     # any bacich classes
     '103.*'
 ]
