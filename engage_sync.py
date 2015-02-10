@@ -6,8 +6,6 @@ import os
 import sys
 
 DO_NOT_ENROLL = [ 
-    # Language Arts 6, History 6 - Ms. Brundige (iWeb)
-    '104.ELA6-BRU', '104.HIST6-BRU', '104.CORE6-BRU',
     # Film Making 7/8 - Ms. Brundige (iWeb)
     '104.FILM78',
     # History 8 - Mr. Palmer (Google Sites)
