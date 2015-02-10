@@ -67,7 +67,7 @@ SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
 104	Grade Level Grouping	9997	T104162	Jelen	
 104	Grade Level Grouping	9997	T103001	Stephens	
 104	Grade Level Grouping	9997	T104148	Ward	
-104	History 6	6200	T104013	Brundige	HIST6-BRU
+104	History 6	6200	T104013	Brundige	CORE6-BRU
 104	History 6	6200	T104021	Goetz	HIST6-GOE
 104	History 6	6200	T104163	Bridges	CORE6-BRI
 104	History 6	6200	T104050	Karlin	CORE6-KAR
@@ -79,7 +79,7 @@ SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
 104	Language Arts 6	6600	T104021	Goetz	ELA6-GOE
 104	Language Arts 6	6600	T104163	Bridges	CORE6-BRI
 104	Language Arts 6	6600	T104050	Karlin	CORE6-KAR
-104	Language Arts 6	6600	T104013	Brundige	ELA6-BRU
+104	Language Arts 6	6600	T104013	Brundige	CORE6-BRU
 104	Language Arts 7	7600	T104131	Moretti	ELA7-MOR
 104	Language Arts 7	7600	T104116	Maltzman	ELA7-MAL
 104	Language Arts 8	8600	T104128	Anderson	ELA8-AND
