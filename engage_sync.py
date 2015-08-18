@@ -5,13 +5,6 @@ import dateutil.parser
 import os
 import sys
 
-DO_NOT_ENROLL = [ 
-    # Art 5, Art 6, Art 7/8 - Ms. Montgomery (iWeb)
-    '104.ART', '104.ART5', '104.ART6', '104.ART78',
-    # any bacich classes
-    '103.*'
-]
-
 DAYS_PAST = 7
 DAYS_UPCOMING = 7
 AUTOSEND = True
@@ -85,12 +78,11 @@ class EngageUploader(object):
     def __init__(self, source_dir=None, output_dir=None, autosend=False, effective_date=datetime.date.today()):
         self.students = { }
         self.teachers = { }
-        self.courses = { }
+        self.classes = { }
         self.sections = { }
         self.enrollments = { }
-        self.course_teachers = { }
-        self.valid_codes = { }
-        self.codes = { }
+        self.section_codes = { }
+        self.class_names = { }
         self.source_dir = source_dir or './source'
         self.output_dir = output_dir or './output'
         try:
@@ -103,9 +95,6 @@ class EngageUploader(object):
         self.loadStudents()
         self.loadTeachers('bacich')
         self.loadTeachers('kent')
-        self.loadCourses('bacich')
-        self.loadCourses('kent')
-        self.loadSections('bacich')
         self.loadSections('kent')
         self.loadEnrollments()
         
@@ -120,17 +109,16 @@ class EngageUploader(object):
                     return True
         return False    
         
-    def getEdlineClassInfo(self, school_id, course_number, teacher_id):
+    def getEdlineClassInfo(self, school_id, course_number, section_number):
         class_id = ''
         class_name = ''
         enroll = False
-        code_id = '.'.join((school_id, course_number, teacher_id))
-        class_tuple = self.codes.get(code_id)
-        if class_tuple:
-            class_id = class_tuple[0]
-            enroll = class_tuple[1]
-            school_class_id = '.'.join((school_id, class_id))
-            class_name = self.valid_codes.get(school_class_id)
+        code_id = '.'.join((school_id, course_number, section_number))
+        class_id = self.section_codes.get(code_id)
+        if class_id:
+            class_name = self.class_names.get(class_id)
+            if class_name:
+                enroll = True
         return (class_id, class_name, enroll)
 
     def getTeacherName(self, teacher_id):
@@ -140,31 +128,20 @@ class EngageUploader(object):
         return '?'
 
     def loadCodes(self):
-        with open(os.path.join(self.source_dir, 'edline_classes.txt')) as f:
+        with open(os.path.join(self.source_dir, 'section-codes.txt')) as f:
             codes = csv.DictReader(f, dialect='excel-tab', lineterminator='\n')
             for row in codes:
-                class_id =  row['Code']
-                class_name = row['Name']
+                class_id = row['Edline_Class_ID']
+                class_name = row['Edline_Class_Name']
                 if class_id and class_name:
                     school_id = row['SchoolID']
-                    school_class_id = '.'.join((school_id, class_id))
-                    self.valid_codes[school_class_id] = class_name
-                    
-        with open(os.path.join(self.source_dir, 'codes.txt')) as f:
-            codes = csv.DictReader(f, dialect='excel-tab', lineterminator='\n')
-            for row in codes:
-                class_id =  row['Code']
-                if class_id:
-                    school_id = row['SchoolID']
-                    school_class_id = '.'.join((school_id, class_id))
-                    if school_class_id not in self.valid_codes:
-                        raise Exception('invalid code %s' % school_class_id)
-                    enroll = not self.excludeFromEnrollment(school_class_id)
-                    course_number = row['Course_Number']
-                    teacher_id = row['Teacher_Id']
-                    code_id = '.'.join((school_id, course_number, teacher_id))
-                    self.codes[code_id] = (class_id, enroll)
-    
+                    course_number =  row['Course_Number']
+                    section_number = row['Section_Number']
+                    teacher_number = row['[Teachers]TeacherNumber']
+                    school_section_id = '.'.join((school_id, course_number, section_number))
+                    self.section_codes[school_section_id] = class_id
+                    self.class_names[class_id] = class_name
+
     def loadStudents(self):
         with open(os.path.join(self.source_dir, 'students.txt')) as f:
             fieldnames = None if not self.autosend else STUDENT_HEADERS
@@ -182,14 +159,6 @@ class EngageUploader(object):
                 row.update({'Assigned': '0'})
                 self.teachers[teacher_id] = row
 
-    def loadCourses(self, school_name):
-        with open(os.path.join(self.source_dir, 'courses-%s.txt' % school_name)) as f:
-            fieldnames = None if not self.autosend else COURSE_HEADERS
-            courses = csv.DictReader(f, fieldnames=fieldnames, dialect='excel-tab', lineterminator='\n')
-            for row in courses:
-                course_number = row['Course_Number']
-                self.courses[course_number] = row
-
     def loadSections(self, school_name):
         with open(os.path.join(self.source_dir, 'sections-%s.txt' % school_name)) as f:
             fieldnames = None if not self.autosend else SECTION_HEADERS
@@ -202,10 +171,13 @@ class EngageUploader(object):
                 if teacher_id in self.teachers:
                     if self.teachers[teacher_id]['Status'] == '1':
                         self.teachers[teacher_id]['Assigned'] = '1'
-                        section_id = '.'.join((school_id, course_number, section_number))
-                        self.sections[section_id] = row
-                        course_teacher_id = '.'.join((school_id, course_number, teacher_id))
-                        self.course_teachers[course_teacher_id] = 1
+                        school_section_id = '.'.join((school_id, course_number, section_number))
+                        self.sections[school_section_id] = row
+                        class_id = self.section_codes.get(school_section_id)
+                        if class_id:
+                            class_name = self.class_names.get(class_id)
+                            if class_name:
+                                self.classes[class_id] = (class_name, teacher_id, school_id)
                     else:
                         print "section %s.%s (%s): teacher %s is not active" % (course_number, section_number, school_id, teacher_id)
                 else:
@@ -221,24 +193,13 @@ class EngageUploader(object):
                 if self.effectiveDate >= start_date and self.effectiveDate <= end_date:
                     school_id = row['SchoolID']
                     course_number = row['Course_Number']
-                    teacher_id = 'T' + row['[05]TeacherNumber']
-                    class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, teacher_id)
+                    section_number = row['Section_Number']
+                    class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, section_number)
                     if class_id and enroll:
                         student_id = 'S' + row['[01]Student_Number']
-                        section_number = row['Section_Number']
+                        teacher_id = 'T' + row['[05]TeacherNumber']
                         enrollment_id = '.'.join((school_id, class_id, student_id, course_number, section_number, teacher_id))
                         self.enrollments[enrollment_id] = row
-                    
-    def dumpAllCourses(self):
-        f = sys.stdout
-        w = csv.writer(f, dialect='excel-tab', lineterminator='\n')
-        w.writerow(['course_name', 'course_number', 'teacher_id', 'teacher_name', 'code', 'name', 'enroll'])
-        for course_teacher_id in self.course_teachers:
-            school_id, course_number, teacher_id = course_teacher_id.split('.')
-            course_name = self.courses[course_number]['Course_Name']
-            teacher_name = self.getTeacherName(teacher_id)
-            class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, teacher_id)
-            w.writerow([course_name, course_number, teacher_id, teacher_name, class_id, class_name, enroll])        
                         
     def dumpActiveEnrollments(self):
         f = sys.stdout
@@ -303,14 +264,9 @@ class EngageUploader(object):
         with open(os.path.join(self.output_dir, 'classes.csv'), 'w')  as f:
             w = csv.writer(f, dialect='excel', lineterminator='\r\n')
             w.writerow(['ClassID', 'Class Name', 'TeacherID', 'SchoolId'])
-            for course_teacher_id in self.course_teachers:
-                school_id, course_number, teacher_id = course_teacher_id.split('.')
-                class_id, class_name, enroll = self.getEdlineClassInfo(school_id, course_number, teacher_id)
-                if class_id:
-                    school_class_id = '.'.join((school_id, class_id))
-                    if not school_class_id in seen_classes:
-                        w.writerow([class_id, class_name, teacher_id, school_id])
-                        seen_classes[school_class_id] = 1
+            for class_id in self.classes:
+                class_name, teacher_id, school_id = self.classes[class_id]
+                w.writerow([class_id, class_name, teacher_id, school_id])
 
     def writeSchedulesFile(self):
         with open(os.path.join(self.output_dir, 'schedules.csv'), 'w')  as f:

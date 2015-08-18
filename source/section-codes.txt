@@ -1,0 +1,383 @@
+ID	SchoolID	[Courses]Course_Name	Course_Number	Section_Number	[Teachers]TeacherNumber	[Teachers]Last_Name	[Terms]Abbreviation	Expression	Edline_Class_ID	Edline_Class_Name
+20191	104	Algebra 8	8128	7	104025	Hettleman	15-16	7(A-B,D-E)	ALGE8	Algebra 8
+20133	104	Architecture 8	8812	31	104011	DeBoi	T3	2(A-C,E)	ARCH8	Architecture 8
+20464	104	Art 5	5820	16	104133	Montgomery	H1	6(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20465	104	Art 5	5820	17	104133	Montgomery	H1	7(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20466	104	Art 5	5820	26	104133	Montgomery	H2	6(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20467	104	Art 5	5820	27	104133	Montgomery	H2	7(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20468	104	Art 5	5820	36	104133	Montgomery	H3	6(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20469	104	Art 5	5820	37	104133	Montgomery	H3	7(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20470	104	Art 5	5821	46	104133	Montgomery	H4	6(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20471	104	Art 5	5821	47	104133	Montgomery	H4	7(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20472	104	Art 5	5821	56	104133	Montgomery	H5	6(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20473	104	Art 5	5821	57	104133	Montgomery	H5	7(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20474	104	Art 5	5821	66	104133	Montgomery	H6	6(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20475	104	Art 5	5821	67	104133	Montgomery	H6	7(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20438	104	Art 7	7821	13	104133	Montgomery	T1	3(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20435	104	Art 7	7821	23	104133	Montgomery	T2	3(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20436	104	Art 7	7821	33	104133	Montgomery	T3	3(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20134	104	Art 8	8820	11	104133	Montgomery	T1	1(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20306	104	Art 8	8820	12	104133	Montgomery	T1	2(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20433	104	Art 8	8820	21	104133	Montgomery	T2	1(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20307	104	Art 8	8820	22	104133	Montgomery	T2	2(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20135	104	Art 8	8820	31	104133	Montgomery	T3	1(A-B,D-E)	ART	Art 5, Art 6, Art 7, Art 8
+20308	104	Art 8	8820	32	104133	Montgomery	T3	2(A-C,E)	ART	Art 5, Art 6, Art 7, Art 8
+20327	104	Academic Workshop 	9971	2	104128	Anderson	15-16	2(A-C,E)	AWKS	Academic Workshop
+20429	104	Academic Workshop 	9971	3	104128	Anderson	15-16	3(A-B,D-E)	AWKS	Academic Workshop
+20109	104	Band 5	5880	613	104150	Martinez	15-16	6(A,C)	BAND5	5th Grade Band
+20110	104	Band 5	5880	625	104150	Martinez	15-16	6(B,E)	BAND5	5th Grade Band
+20111	104	Band 5	5880	715	104150	Martinez	15-16	7(A,E)	BAND5	5th Grade Band
+20112	104	Band 5	5880	724	104150	Martinez	15-16	7(B,D)	BAND5	5th Grade Band
+20185	104	Band 6	6880	2	104150	Martinez	15-16	2(A-C,E)	BAND6	6th Grade Band
+20186	104	Band 6	6880	3	104150	Martinez	15-16	3(A-B,D-E)	BAND6	6th Grade Band
+20309	104	Band Advanced	9880	1	104150	Martinez	15-16	8(A,C,E)	BANDA	Advanced Band
+20187	104	Chorus 6	6891	5	104150	Martinez	15-16	5(A-B,D-E)	CHOR6	6th Grade Chorus
+20310	104	Concert Choir	9890	1	104150	Martinez	15-16	8(B,D)	CHORA	Advanced Choir
+20215	104	Coding 7	7833	1	104116	Maltzman	H1	3(A-B,D-E)	CODE7	Coding 7
+20431	104	Coding 7	7833	2	104116	Maltzman	H2	3(A-B,D-E)	CODE7	Coding 7
+20369	104	Coding 7	7833	3	104116	Maltzman	H3	3(A-B,D-E)	CODE7	Coding 7
+20434	104	Coding 7	7833	4	104116	Maltzman	H4	3(A-B,D-E)	CODE7	Coding 7
+20113	104	Coding 7	7833	5	104116	Maltzman	H5	3(A-B,D-E)	CODE7	Coding 7
+20115	104	Coding 7	7833	6	104116	Maltzman	H6	3(A-B,D-E)	CODE7	Coding 7
+20119	104	History 6	6200	92	104163	Bridges	15-16	2(A-C,E)	CORE6-BRI	Core 6 - Ms. Bridges
+20143	104	Language Arts 6	6600	91	104163	Bridges	15-16	1(A-B,D-E)	CORE6-BRI	Core 6 - Ms. Bridges
+20118	104	History 6	6200	132	104050	Karlin	15-16	2(A-C,E)	CORE6-KAR	Core 6 - Karlin
+20121	104	History 6	6200	137	104050	Karlin	15-16	7(A-B,D-E)	CORE6-KAR	Core 6 - Karlin
+20142	104	Language Arts 6	6600	131	104050	Karlin	15-16	1(A-B,D-E)	CORE6-KAR	Core 6 - Karlin
+20145	104	Language Arts 6	6600	136	104050	Karlin	15-16	6(A-C,E)	CORE6-KAR	Core 6 - Karlin
+20120	104	History 6	6200	112	104161	Wells	15-16	2(A,C-E)	CORE6-WEL	Core 6 - Wells
+20122	104	History 6	6200	117	104161	Wells	15-16	7(A-B,D-E)	CORE6-WEL	Core 6 - Wells
+20144	104	Language Arts 6	6600	111	104161	Wells	15-16	1(A-B,D-E)	CORE6-WEL	Core 6 - Wells
+20146	104	Language Arts 6	6600	116	104161	Wells	15-16	6(A-C,E)	CORE6-WEL	Core 6 - Wells
+20199	104	Drama 7	7840	13	104131	Moretti	T1	3(A-B,D-E)	DRAM7	Drama 7
+20226	104	Drama 7	7840	23	104131	Moretti	T2	3(A-B,D-E)	DRAM7	Drama 7
+20227	104	Drama 7	7840	33	104131	Moretti	T3	3(A-B,D-E)	DRAM7	Drama 7
+20147	104	Language Arts 6	6600	146	104021	Goetz	15-16	6(A-C,E)	ELA6-GOE	Language Arts 6 - Goetz
+20207	104	Language Arts 7	7600	5	104116	Maltzman	15-16	5(A-B,D-E)	ELA7-MAL	Language Arts 7 - Maltzman
+20210	104	Language Arts 7	7600	7	104116	Maltzman	15-16	7(A-B,D-E)	ELA7-MAL	Language Arts 7 - Maltzman
+20206	104	Language Arts 7	7600	60	104116	Maltzman	15-16	6(A-C,E)	ELA7-MAL	Language Arts 7 - Maltzman
+20208	104	Language Arts 7	7600	10	104131	Moretti	15-16	1(A-B,D-E)	ELA7-MOR	Language Arts 7 - Moretti
+20205	104	Language Arts 7	7600	20	104131	Moretti	15-16	2(A-C,E)	ELA7-MOR	Language Arts 7 - Moretti
+20209	104	Language Arts 7	7600	50	104131	Moretti	15-16	5(A-B,D-E)	ELA7-MOR	Language Arts 7 - Moretti
+20253	104	Language Arts 8	8600	5	104128	Anderson	15-16	5(A-B,D-E)	ELA8-AND	Language Arts 8 - Anderson
+20251	104	Language Arts 8	8600	7	104128	Anderson	15-16	7(A-B,D-E)	ELA8-AND	Language Arts 8 - Anderson
+20255	104	Language Arts 8	8600	61	104128	Anderson	15-16	6(A-C,E)	ELA8-AND	Language Arts 8 - Anderson
+20256	104	Language Arts 8	8600	3	104016	Gavin	15-16	3(A-B,D-E)	ELA8-GAV	Language Arts 8 - Gavin
+20252	104	Language Arts 8	8600	4	104016	Gavin	15-16	4(A-C,E)	ELA8-GAV	Language Arts 8 - Gavin
+20254	104	Language Arts 8	8600	6	104016	Gavin	15-16	6(A-C,E)	ELA8-GAV	Language Arts 8 - Gavin
+20420	104	ELA/History Core 5	5202	5	104122	Hagan	15-16	2(E) 3(A-B,D) 4(A-C)	ELAH5-HAG	ELA/History Core 5 - Hagan
+20421	104	ELA/History Core 5	5202	55	104122	Hagan	15-16	5(A,D)	ELAH5-HAG	ELA/History Core 5 - Hagan
+20423	104	ELA/History Core 5	5202	66	104122	Hagan	15-16	3-4(E) 5(B)	ELAH5-HAG	ELA/History Core 5 - Hagan
+20424	104	ELA/History Core 5	5202	7	104162	Jelen	15-16	1(A-B,D-E) 2(A-C)	ELAH5-JEL	ELA/History Core 5 - Jelen
+20426	104	ELA/History Core 5	5202	9	104162	Jelen	15-16	2(E) 3(A-B,D) 4(A-C)	ELAH5-JEL	ELA/History Core 5 - Jelen
+20425	104	ELA/History Core 5	5202	77	104162	Jelen	15-16	3-4(E) 5(B)	ELAH5-JEL	ELA/History Core 5 - Jelen
+20427	104	ELA/History Core 5	5202	99	104162	Jelen	15-16	5(A,D)	ELAH5-JEL	ELA/History Core 5 - Jelen
+20422	104	ELA/History Core 5	5202	6	103001	Stephens	15-16	1(A-B,D-E) 2(A-C)	ELAH5-STE	ELA/History Core 5 - Stephens
+20416	104	ELA/History Core 5	5202	1	104403	Torrano	15-16	1(A-B,D-E) 2(A-C)	ELAH5-TOR	ELA/History Core 5 - Torrano
+20418	104	ELA/History Core 5	5202	2	104403	Torrano	15-16	2(E) 3(A-B,D) 4(A-C)	ELAH5-TOR	ELA/History Core 5 - Torrano
+20417	104	ELA/History Core 5	5202	11	104403	Torrano	15-16	3-4(E) 5(B)	ELAH5-TOR	ELA/History Core 5 - Torrano
+20419	104	ELA/History Core 5	5202	22	104403	Torrano	15-16	5(A,D)	ELAH5-TOR	ELA/History Core 5 - Torrano
+20328	104	English Language Development	9980	7	103001	Stephens	15-16	7(A-B,D-E)	ELD	English Language Development
+20329	104	English Language Development	9980	724	103001	Stephens	15-16	7(B,D)	ELD	English Language Development
+20222	104	Enterprise 7	7864	13	104011	DeBoi	T1	3(A-B,D-E)	ENTR7	Enterprise 7
+20223	104	Enterprise 7	7864	23	104011	DeBoi	T2	3(A-B,D-E)	ENTR7	Enterprise 7
+20224	104	Enterprise 7	7864	33	104011	DeBoi	T3	3(A-B,D-E)	ENTR7	Enterprise 7
+20234	104	Enterprise 7	7864	131	104021	Goetz	T1	3(A-B,D-E)	ENTR7	Enterprise 7
+20235	104	Enterprise 7	7864	231	104021	Goetz	T2	3(A-B,D-E)	ENTR7	Enterprise 7
+20236	104	Enterprise 7	7864	331	104021	Goetz	T3	3(A-B,D-E)	ENTR7	Enterprise 7
+20228	104	Expressions 3D 7	7853	31	104042	Osterman	H1	3(A-B,D-E)	EX3D7	Expressions 3D 7
+20229	104	Expressions 3D 7	7853	32	104042	Osterman	H2	3(A-B,D-E)	EX3D7	Expressions 3D 7
+20230	104	Expressions 3D 7	7853	33	104042	Osterman	H3	3(A-B,D-E)	EX3D7	Expressions 3D 7
+20231	104	Expressions 3D 7	7853	34	104042	Osterman	H4	3(A-B,D-E)	EX3D7	Expressions 3D 7
+20232	104	Expressions 3D 7	7853	35	104042	Osterman	H5	3(A-B,D-E)	EX3D7	Expressions 3D 7
+20233	104	Expressions 3D 7	7853	36	104042	Osterman	H6	3(A-B,D-E)	EX3D7	Expressions 3D 7
+20476	104	Expressions 5	5850	16	104042	Osterman	H1	6(A-C,E)	EXPR5	Expressions 5
+20477	104	Expressions 5	5850	17	104042	Osterman	H1	7(A-B,D-E)	EXPR5	Expressions 5
+20478	104	Expressions 5	5850	26	104042	Osterman	H2	6(A-C,E)	EXPR5	Expressions 5
+20479	104	Expressions 5	5850	27	104042	Osterman	H2	7(A-B,D-E)	EXPR5	Expressions 5
+20480	104	Expressions 5	5850	36	104042	Osterman	H3	6(A-C,E)	EXPR5	Expressions 5
+20481	104	Expressions 5	5850	37	104042	Osterman	H3	7(A-B,D-E)	EXPR5	Expressions 5
+20482	104	Expressions 5	5851	46	104042	Osterman	H4	6(A-C,E)	EXPR5	Expressions 5
+20104	104	Expressions 5	5851	47	104042	Osterman	H4	7(A-B,D-E)	EXPR5	Expressions 5
+20105	104	Expressions 5	5851	56	104042	Osterman	H5	6(A-C,E)	EXPR5	Expressions 5
+20106	104	Expressions 5	5851	57	104042	Osterman	H5	7(A-B,D-E)	EXPR5	Expressions 5
+20107	104	Expressions 5	5851	66	104042	Osterman	H6	6(A-C,E)	EXPR5	Expressions 5
+20108	104	Expressions 5	5851	67	104042	Osterman	H6	7(A-B,D-E)	EXPR5	Expressions 5
+20167	104	Expressions 6	6850	14	104021	Goetz	H1	4(A-C,E)	EXPR6-GOE	Expressions 6 - Goetz
+20168	104	Expressions 6	6850	24	104021	Goetz	H2	4(A-C,E)	EXPR6-GOE	Expressions 6 - Goetz
+20169	104	Expressions 6	6850	34	104021	Goetz	H3	4(A-C,E)	EXPR6-GOE	Expressions 6 - Goetz
+20170	104	Expressions 6	6850	44	104021	Goetz	H4	4(A-C,E)	EXPR6-GOE	Expressions 6 - Goetz
+20171	104	Expressions 6	6850	54	104021	Goetz	H5	4(A-C,E)	EXPR6-GOE	Expressions 6 - Goetz
+20172	104	Expressions 6	6850	64	104021	Goetz	H6	4(A-C,E)	EXPR6-GOE	Expressions 6 - Goetz
+20173	104	Expressions 6	6851	14	104050	Karlin	H1	4(A-C,E)	EXPR6-KAR	Expressions 6 - Karlin
+20174	104	Expressions 6	6851	24	104050	Karlin	H2	4(A-C,E)	EXPR6-KAR	Expressions 6 - Karlin
+20175	104	Expressions 6	6851	34	104050	Karlin	H3	4(A-C,E)	EXPR6-KAR	Expressions 6 - Karlin
+20176	104	Expressions 6	6851	44	104050	Karlin	H4	4(A-C,E)	EXPR6-KAR	Expressions 6 - Karlin
+20177	104	Expressions 6	6851	54	104050	Karlin	H5	4(A-C,E)	EXPR6-KAR	Expressions 6 - Karlin
+20178	104	Expressions 6	6851	64	104050	Karlin	H6	4(A-C,E)	EXPR6-KAR	Expressions 6 - Karlin
+20179	104	Expressions 6	6852	14	104042	Osterman	H1	4(A-C,E)	EXPR6-OST	Expressions 6 - Osterman
+20180	104	Expressions 6	6852	24	104042	Osterman	H2	4(A-C,E)	EXPR6-OST	Expressions 6 - Osterman
+20181	104	Expressions 6	6852	34	104042	Osterman	H3	4(A-C,E)	EXPR6-OST	Expressions 6 - Osterman
+20182	104	Expressions 6	6852	44	104042	Osterman	H4	4(A-C,E)	EXPR6-OST	Expressions 6 - Osterman
+20183	104	Expressions 6	6852	54	104042	Osterman	H5	4(A-C,E)	EXPR6-OST	Expressions 6 - Osterman
+20184	104	Expressions 6	6852	64	104042	Osterman	H6	4(A-C,E)	EXPR6-OST	Expressions 6 - Osterman
+20156	104	Expressions 6	6853	14	104161	Wells	H1	4(A-C,E)	EXPR6-WEL	Expressions 6 - Wells
+20158	104	Expressions 6	6853	24	104161	Wells	H2	4(A-C,E)	EXPR6-WEL	Expressions 6 - Wells
+20160	104	Expressions 6	6853	34	104161	Wells	H3	4(A-C,E)	EXPR6-WEL	Expressions 6 - Wells
+20155	104	Expressions 6	6853	44	104161	Wells	H4	4(A-C,E)	EXPR6-WEL	Expressions 6 - Wells
+20157	104	Expressions 6	6853	54	104161	Wells	H5	4(A-C,E)	EXPR6-WEL	Expressions 6 - Wells
+20159	104	Expressions 6	6853	64	104161	Wells	H6	4(A-C,E)	EXPR6-WEL	Expressions 6 - Wells
+20274	104	Expressions 8	8863	11	104016	Gavin	T1	1(A-B,D-E)	EXPR8	Expressions 8
+20268	104	Expressions 8	8863	12	104016	Gavin	T1	2(A-C,E)	EXPR8	Expressions 8
+20275	104	Expressions 8	8863	21	104016	Gavin	T2	1(A-B,D-E)	EXPR8	Expressions 8
+20269	104	Expressions 8	8863	22	104016	Gavin	T2	2(A-C,E)	EXPR8	Expressions 8
+20276	104	Expressions 8	8863	31	104016	Gavin	T3	1(A-B,D-E)	EXPR8	Expressions 8
+20270	104	Expressions 8	8863	32	104016	Gavin	T3	2(A-C,E)	EXPR8	Expressions 8
+20123	104	History 6	6200	147	104021	Goetz	15-16	7(A-B,D-E)	HIST6-GOE	History 6 - Goetz
+20136	104	History 7	7200	1	104118	Palmer	15-16	1(A-B,D-E)	HIST7-PAL	History 7 - Palmer
+20241	104	History 7	7200	2	104118	Palmer	15-16	2(A-C,E)	HIST7-PAL	History 7 - Palmer
+20242	104	History 7	7200	4	104118	Palmer	15-16	4(A-C,E)	HIST7-PAL	History 7 - Palmer
+20195	104	History 7	7200	5	104148	Ward	15-16	5(A-B,D-E)	HIST7-WAR	History 7 - Ward
+20196	104	History 7	7200	6	104148	Ward	15-16	6(A-C,E)	HIST7-WAR	History 7 - Ward
+20197	104	History 7	7200	7	104148	Ward	15-16	7(A-B,D-E)	HIST7-WAR	History 7 - Ward
+20243	104	History 8	8200	5	104118	Palmer	15-16	5(A-B,D-E)	HIST8-PAL	History 8 - Palmer
+20244	104	History 8	8200	6	104118	Palmer	15-16	6(A-C,E)	HIST8-PAL	History 8 - Palmer
+20245	104	History 8	8200	7	104118	Palmer	15-16	7(A-B,D-E)	HIST8-PAL	History 8 - Palmer
+20198	104	History 8	8200	3	104148	Ward	15-16	3(A-B,D-E)	HIST8-WAR	History 8 - Ward
+20194	104	History 8	8200	4	104148	Ward	15-16	4(A-C,E)	HIST8-WAR	History 8 - Ward
+20271	104	Journalism 8	8861	11	104021	Goetz	T1	1(A-B,D-E)	JOUR8	Journalism 8
+20272	104	Journalism 8	8861	21	104021	Goetz	T2	1(A-B,D-E)	JOUR8	Journalism 8
+20273	104	Journalism 8	8861	31	104021	Goetz	T3	1(A-B,D-E)	JOUR8	Journalism 8
+20161	104	Life Skills 6	6841	14	104163	Bridges	H1	4(A-C,E)	LIFE	Life Skills
+20162	104	Life Skills 6	6841	24	104163	Bridges	H2	4(A-C,E)	LIFE	Life Skills
+20163	104	Life Skills 6	6841	34	104163	Bridges	H3	4(A-C,E)	LIFE	Life Skills
+20164	104	Life Skills 6	6841	44	104163	Bridges	H4	4(A-C,E)	LIFE	Life Skills
+20165	104	Life Skills 6	6841	54	104163	Bridges	H5	4(A-C,E)	LIFE	Life Skills
+20166	104	Life Skills 6	6841	64	104163	Bridges	H6	4(A-C,E)	LIFE	Life Skills
+20430	104	Kent Makers 6	6815	6	104011	DeBoi	H6	4(A-C,E)	MAKR6	Kent Makers 6
+20266	104	Kent Makers 6	6815	14	104011	DeBoi	H1	4(A-C,E)	MAKR6	Kent Makers 6
+20130	104	Kent Makers 6	6815	24	104011	DeBoi	H2	4(A-C,E)	MAKR6	Kent Makers 6
+20444	104	Kent Makers 6	6815	34	104011	DeBoi	H3	4(A-C,E)	MAKR6	Kent Makers 6
+20131	104	Kent Makers 6	6815	44	104011	DeBoi	H4	4(A-C,E)	MAKR6	Kent Makers 6
+20403	104	Kent Makers 6	6815	54	104011	DeBoi	H5	4(A-C,E)	MAKR6	Kent Makers 6
+20132	104	Kent Makers 8	8815	21	104011	DeBoi	T2	2(A-C,E)	MAKR6	Kent Makers 6
+20117	104	Mathematics 6	6100	7	104048	Klima	15-16	7(A-B,D-E)	MATH6-KLI	Mathematics 6 - Klima
+20138	104	Mathematics 6	6100	23	104048	Klima	15-16	3(A-B,D-E)	MATH6-KLI	Mathematics 6 - Klima
+20116	104	Mathematics 6	6100	25	104048	Klima	15-16	5(A-B,D-E)	MATH6-KLI	Mathematics 6 - Klima
+20114	104	Mathematics 6	6100	1	104178	Lentini	15-16	1(A-B,D-E)	MATH6-LEN	Mathematics 6 - Lentini
+20370	104	Mathematics 6	6100	13	104178	Lentini	15-16	3(A-B,D-E)	MATH6-LEN	Mathematics 6 - Lentini
+20217	104	Mathematics 6	6100	15	104178	Lentini	15-16	5(A-B,D-E)	MATH6-LEN	Mathematics 6 - Lentini
+20137	104	Mathematics 7	7100	10	104048	Klima	15-16	1(A-B,D-E)	MATH7-KLI	Mathematics 7- Klima
+20225	104	Mathematics 7	7100	40	104048	Klima	15-16	4(A-C,E)	MATH7-KLI	Mathematics 7- Klima
+20189	104	Mathematics 7	7100	2	104132	Widelock	15-16	2(A-C,E)	MATH7-WID	Mathematics 7 - Widelock
+20240	104	Mathematics 7	7100	7	104132	Widelock	15-16	7(A-B,D-E)	MATH7-WID	Mathematics 7 - Widelock
+20188	104	Mathematics 8	8102	23	104025	Hettleman	15-16	3(A-B,D-E)	MATH8-HET	Mathematics 8 - Hettleman
+20312	104	Mathematics 8	8102	25	104025	Hettleman	15-16	5(A-B,D-E)	MATH8-HET	Mathematics 8 - Hettleman
+20237	104	Mathematics 8	8102	13	104132	Widelock	15-16	3(A-B,D-E)	MATH8-WID	Mathematics 8 - Widelock
+20238	104	Mathematics 8	8102	14	104132	Widelock	15-16	4(A-C,E)	MATH8-WID	Mathematics 8 - Widelock
+20190	104	Mathematics 8	8102	15	104132	Widelock	15-16	5(A-B,D-E)	MATH8-WID	Mathematics 8 - Widelock
+20267	104	Extended Math	9911	4	104025	Hettleman	15-16	4(A-C,E)	MATHX	Extended Math
+20313	104	Extended Math	9911	6	104025	Hettleman	15-16	6(A-C,E)	MATHX	Extended Math
+20408	104	Math/Science Core 5	5102	5	104401	Bridgman	15-16	1(A-B,D-E) 2(A-C)	MSCI5-BRI	Math/Science Core 5 - Bridgman
+20410	104	Math/Science Core 5	5102	6	104401	Bridgman	15-16	2(E) 3(A-B,D) 4(A-C)	MSCI5-BRI	Math/Science Core 5 - Bridgman
+20409	104	Math/Science Core 5	5102	55	104401	Bridgman	15-16	3-4(E) 5(B)	MSCI5-BRI	Math/Science Core 5 - Bridgman
+20411	104	Math/Science Core 5	5102	66	104401	Bridgman	15-16	5(A,D)	MSCI5-BRI	Math/Science Core 5 - Bridgman
+20404	104	Math/Science Core 5	5102	1	104165	Chusid	15-16	2(E) 3(A-B,D) 4(A-C)	MSCI5-CHU	Math/Science Core 5 - Chusid
+20406	104	Math/Science Core 5	5102	2	104165	Chusid	15-16	1(A-B,D-E) 2(A-C)	MSCI5-CHU	Math/Science Core 5 - Chusid
+20405	104	Math/Science Core 5	5102	11	104165	Chusid	15-16	5(A,D)	MSCI5-CHU	Math/Science Core 5 - Chusid
+20407	104	Math/Science Core 5	5102	22	104165	Chusid	15-16	3-4(E) 5(B)	MSCI5-CHU	Math/Science Core 5 - Chusid
+20412	104	Math/Science Core 5	5102	7	104387	Gallagher	15-16	2(E) 3(A-B,D) 4(A-C)	MSCI5-GAL	Math/Science Core 5 - Gallagher
+20414	104	Math/Science Core 5	5102	8	104387	Gallagher	15-16	1(A-B,D-E) 2(A-C)	MSCI5-GAL	Math/Science Core 5 - Gallagher
+20413	104	Math/Science Core 5	5102	77	104387	Gallagher	15-16	5(A,D)	MSCI5-GAL	Math/Science Core 5 - Gallagher
+20415	104	Math/Science Core 5	5102	88	104387	Gallagher	15-16	3-4(E) 5(B)	MSCI5-GAL	Math/Science Core 5 - Gallagher
+20192	104	Math+ 7	7177	2	104178	Lentini	15-16	2(A-C,E)	PALG7	Math 7+ - Lentini
+20193	104	Math+ 7	7177	6	104178	Lentini	15-16	6(A-C,E)	PALG7	Math 7+ - Lentini
+20428	104	PE 5	5700	613	104031	Kelly	15-16	6(A,C)	PE5	PE 5
+20447	104	PE 5	5700	625	104031	Kelly	15-16	6(B,E)	PE5	PE 5
+20449	104	PE 5	5700	715	104031	Kelly	15-16	7(A,E)	PE5	PE 5
+20451	104	PE 5	5700	724	104031	Kelly	15-16	7(B,D)	PE5	PE 5
+20154	104	PE 5	5700	6132	104400	Gatti	15-16	6(A,C)	PE5	PE 5
+20448	104	PE 5	5700	6252	104400	Gatti	15-16	6(B,E)	PE5	PE 5
+20450	104	PE 5	5700	7152	104400	Gatti	15-16	7(A,E)	PE5	PE 5
+20485	104	PE 5	5700	7242	104400	Gatti	15-16	7(B,D)	PE5	PE 5
+20257	104	PE 6	6700	11	103092	Fox	15-16	1(A-B,D-E)	PE6	PE 6
+20150	104	PE 6	6700	15	103092	Fox	15-16	5(A-B,D-E)	PE6	PE 6
+20293	104	PE 6	6700	16	103092	Fox	15-16	6(A-C,E)	PE6	PE 6
+20153	104	PE 6	6700	17	103092	Fox	15-16	7(A-B,D-E)	PE6	PE 6
+20213	104	PE 6	6700	23	104031	Kelly	15-16	3(A-B,D-E)	PE6	PE 6
+20149	104	PE 7	7700	14	103092	Fox	15-16	4(A-C,E)	PE7	PE 7
+20258	104	PE 7	7700	21	104031	Kelly	15-16	1(A-B,D-E)	PE7	PE 7
+20260	104	PE 7	7700	24	104031	Kelly	15-16	4(A-C,E)	PE7	PE 7
+20214	104	PE 7	7700	35	104102	Gillespie	15-16	5(A-B,D-E)	PE7	PE 7
+20152	104	PE 7	7700	36	104102	Gillespie	15-16	6(A-C,E)	PE7	PE 7
+20151	104	PE 7	7700	37	104102	Gillespie	15-16	7(A-B,D-E)	PE7	PE 7
+20259	104	PE 8	8700	31	104102	Gillespie	15-16	1(A-B,D-E)	PE8	PE 8
+20148	104	PE 8	8700	32	104102	Gillespie	15-16	2(A-C,E)	PE8	PE 8
+20211	104	PE 8	8700	41	104400	Gatti	15-16	1(A-B,D-E)	PE8	PE 8
+20212	104	PE 8	8700	42	104400	Gatti	15-16	2(A-C,E)	PE8	PE 8
+20314	104	Extended Reading	9922	5	104163	Bridges	15-16	5(A-B,D-E)	READX	Extended Reading
+20315	104	Extended Reading	9922	5145	104163	Bridges	15-16	5(A,D-E)	READX	Extended Reading
+20458	104	Robotics 5	5813	46	104011	DeBoi	H4	6(A-C,E)	ROBT5	Robotics 5
+20459	104	Robotics 5	5813	47	104011	DeBoi	H4	7(A-B,D-E)	ROBT5	Robotics 5
+20460	104	Robotics 5	5813	56	104011	DeBoi	H5	6(A-C,E)	ROBT5	Robotics 5
+20461	104	Robotics 5	5813	57	104011	DeBoi	H5	7(A-B,D-E)	ROBT5	Robotics 5
+20462	104	Robotics 5	5813	66	104011	DeBoi	H6	6(A-C,E)	ROBT5	Robotics 5
+20463	104	Robotics 5	5813	67	104011	DeBoi	H6	7(A-B,D-E)	ROBT5	Robotics 5
+20124	104	Science 6	6400	1	104117	Pembleton	15-16	1(A-B,D-E)	SCI6	Science 6
+20125	104	Science 6	6400	2	104023	Griffin	15-16	2(A-C,E)	SCI6	Science 6
+20126	104	Science 6	6400	3	104023	Griffin	15-16	3(A-B,D-E)	SCI6	Science 6
+20127	104	Science 6	6400	5	104023	Griffin	15-16	5(A-B,D-E)	SCI6	Science 6
+20128	104	Science 6	6400	6	104023	Griffin	15-16	6(A-C,E)	SCI6	Science 6
+20129	104	Science 6	6400	7	104023	Griffin	15-16	7(A-B,D-E)	SCI6	Science 6
+20140	104	Science 7	7400	1	104130	Canin	15-16	1(A-B,D-E)	SCI7	Science 7
+20440	104	Science 7	7400	2	104130	Canin	15-16	2(A,C-E)	SCI7	Science 7
+20201	104	Science 7	7400	4	104130	Canin	15-16	4(A-C,E)	SCI7	Science 7
+20202	104	Science 7	7400	5	104130	Canin	15-16	5(A-B,D-E)	SCI7	Science 7
+20203	104	Science 7	7400	6	104130	Canin	15-16	6(A-C,E)	SCI7	Science 7
+20204	104	Science 7	7400	7	104130	Canin	15-16	7(A-B,D-E)	SCI7	Science 7
+20246	104	Science 8	8400	3	104117	Pembleton	15-16	3(A-B,D-E)	SCI8	Science 8
+20247	104	Science 8	8400	4	104117	Pembleton	15-16	4(A-C,E)	SCI8	Science 8
+20248	104	Science 8	8400	5	104117	Pembleton	15-16	5(A-B,D-E)	SCI8	Science 8
+20249	104	Science 8	8400	6	104117	Pembleton	15-16	6(A-C,E)	SCI8	Science 8
+20250	104	Science 8	8400	7	104117	Pembleton	15-16	7(A-B,D-E)	SCI8	Science 8
+20443	104	Spanish A	7808	1	104044	Roubinian	15-16	1(A-B,D-E)	SPANA	Spanish A
+20216	104	Spanish A	7808	2	104044	Roubinian	15-16	2(A-C,E)	SPANA	Spanish A
+20219	104	Spanish A	7808	5	104044	Roubinian	15-16	5(A-B,D-E)	SPANA	Spanish A
+20220	104	Spanish A	7808	6	104044	Roubinian	15-16	6(A-C,E)	SPANA	Spanish A
+20221	104	Spanish A	7808	7	104044	Roubinian	15-16	7(A-B,D-E)	SPANA	Spanish A
+20261	104	Spanish B	8808	3	104164	Calmels	15-16	3(A-B,D-E)	SPANB	Spanish B
+20262	104	Spanish B	8808	4	104164	Calmels	15-16	4(A-C,E)	SPANB	Spanish B
+20263	104	Spanish B	8808	5	104164	Calmels	15-16	5(A-B,D-E)	SPANB	Spanish B
+20264	104	Spanish B	8808	6	104164	Calmels	15-16	6(A-C,E)	SPANB	Spanish B
+20265	104	Spanish B	8808	7	104164	Calmels	15-16	7(A-B,D-E)	SPANB	Spanish B
+20452	104	Woodworking 5	5812	16	104011	DeBoi	H1	6(A-C,E)	WOOD5	Woodworking 5
+20453	104	Woodworking 5	5812	17	104011	DeBoi	H1	7(A-B,D-E)	WOOD5	Woodworking 5
+20454	104	Woodworking 5	5812	26	104011	DeBoi	H2	6(A-C,E)	WOOD5	Woodworking 5
+20455	104	Woodworking 5	5812	27	104011	DeBoi	H2	7(A-B,D-E)	WOOD5	Woodworking 5
+20456	104	Woodworking 5	5812	36	104011	DeBoi	H3	6(A-C,E)	WOOD5	Woodworking 5
+20457	104	Woodworking 5	5812	37	104011	DeBoi	H3	7(A-B,D-E)	WOOD5	Woodworking 5
+20432	104	Woodworking 8	8814	11	104011	DeBoi	T1	2(A-C,E)	WOOD8	Woodworking 8
+20277	104	Learning Center Math	9090	1	104092	Beales	15-16	1(A-B,D-E)		
+20278	104	Learning Center Math	9090	2	104092	Beales	15-16	2(A-C,E)		
+20484	104	Learning Center Math	9090	3	104092	Beales	15-16	3(A-B,D-E)		
+20280	104	Learning Center Math	9090	4	104092	Beales	15-16	4(A-C,E)		
+20281	104	Learning Center Math	9090	5	104092	Beales	15-16	5(A-B,D-E)		
+20282	104	Learning Center Math	9090	6	104092	Beales	15-16	6(A-C,E)		
+20283	104	Learning Center Math	9090	7	104092	Beales	15-16	7(A-B,D-E)		
+20279	104	Learning Center Math	9090	53	104092	Beales	15-16	2(E) 3(A-B,D)		
+20284	104	Learning Center LA	9092	1	104092	Beales	15-16	1(A-B,D-E)		
+20285	104	Learning Center LA	9092	2	104092	Beales	15-16	2(A-C,E)		
+20287	104	Learning Center LA	9092	3	104065	Whitehouse	15-16	3(A-B,D-E)		
+20289	104	Learning Center LA	9092	4	104092	Beales	15-16	4(A-C,E)		
+20291	104	Learning Center LA	9092	5	104065	Whitehouse	15-16	5(A-B,D-E)		
+20292	104	Learning Center LA	9092	6	104065	Whitehouse	15-16	6(A-C,E)		
+20295	104	Learning Center LA	9092	7	104065	Whitehouse	15-16	7(A-B,D-E)		
+20286	104	Learning Center LA	9092	25	104092	Beales	15-16	2(E)		
+20288	104	Learning Center LA	9092	32	104092	Beales	15-16	3(A-B,D)		
+20290	104	Learning Center LA	9092	42	104092	Beales	15-16	4(A-C)		
+20296	104	Learning Center Support	9094	1	104065	Whitehouse	15-16	1(A-B,D-E)		
+20297	104	Learning Center Support	9094	2	104065	Whitehouse	15-16	2(A-C,E)		
+20298	104	Learning Center Support	9094	3	104065	Whitehouse	15-16	3(A-B,D-E)		
+20299	104	Learning Center Support	9094	4	104065	Whitehouse	15-16	4(A-C,E)		
+20301	104	Learning Center Support	9094	5	104065	Whitehouse	15-16	5(A-B,D-E)		
+20303	104	Learning Center Support	9094	6	104065	Whitehouse	15-16	6(A-C,E)		
+20305	104	Learning Center Support	9094	7	104065	Whitehouse	15-16	7(A-B,D-E)		
+20300	104	Learning Center Support	9094	54	104065	Whitehouse	15-16	4(A-C)		
+20302	104	Learning Center Support	9094	55	104065	Whitehouse	15-16	5(A,D)		
+20442	104	Learning Center Support	9094	535	104065	Whitehouse	15-16	3-4(E) 5(A-B,D)		
+20304	104	Learning Center Support	9094	561	104065	Whitehouse	15-16	6(B,E)		
+20437	104	Learning Center Support	9094	581	104065	Whitehouse	15-16	3-4(E) 5(B)		
+20439	104	Learning Center Support	9094	595	104065	Whitehouse	15-16	7(A,D)		
+20311	104	Mathletes	9895	28	104178	Lentini	15-16	8(B)		
+20316	104	Student Self Study Period	9966	1	104134	Brittonsmith	15-16	1(A-B,D-E)		
+20317	104	Student Self Study Period	9966	2	104134	Brittonsmith	15-16	2(A-C,E)		
+20319	104	Student Self Study Period	9966	3	104134	Brittonsmith	15-16	3(A-B,D-E)		
+20320	104	Student Self Study Period	9966	4	104134	Brittonsmith	15-16	4(A-C,E)		
+20321	104	Student Self Study Period	9966	5	104134	Brittonsmith	15-16	5(A-B,D-E)		
+20322	104	Student Self Study Period	9966	6	104134	Brittonsmith	15-16	6(A-C,E)		
+20324	104	Student Self Study Period	9966	7	104134	Brittonsmith	15-16	7(A-B,D-E)		
+20318	104	Student Self Study Period	9966	22	103001	Stephens	15-16	2(A-C,E)		
+20323	104	Student Self Study Period	9966	62	104134	Brittonsmith	15-16	6(B,E)		
+20325	104	Student Self Study Period	9966	71	104134	Brittonsmith	15-16	7(B,D)		
+20326	104	Student Self Study Period	9966	715	104134	Brittonsmith	15-16	7(A,E)		
+20330	104	Nest 5	9991	1	104403	Torrano	15-16	5(E) 10(D) 11(E)		
+20331	104	Nest 5	9991	2	104165	Chusid	15-16	5(E) 10(D) 11(E)		
+20332	104	Nest 5	9991	5	104401	Bridgman	15-16	5(E) 10(D) 11(E)		
+20334	104	Nest 5	9991	6	104122	Hagan	15-16	5(E) 10(D) 11(E)		
+20333	104	Nest 5	9991	7	104162	Jelen	15-16	5(E) 10(D) 11(E)		
+20335	104	Nest 5	9991	8	104387	Gallagher	15-16	5(E) 10(D) 11(E)		
+20361	104	Advisory	9993	9	104163	Bridges	15-16	9(C)		
+20341	104	Advisory	9993	10	104102	Gillespie	15-16	9(C)		
+20139	104	Advisory	9993	11	104048	Klima	15-16	9(C)		
+20337	104	Advisory	9993	12	104161	Wells	15-16	9(C)		
+20338	104	Advisory	9993	13	104050	Karlin	15-16	9(C)		
+20339	104	Advisory	9993	14	104021	Goetz	15-16	9(C)		
+20340	104	Advisory	9993	15	104025	Hettleman	15-16	9(C)		
+20357	104	Advisory	9993	16	103092	Fox	15-16	9(C)		
+20342	104	Advisory	9993	17	104130	Canin	15-16	9(C)		
+20343	104	Advisory	9993	18	104023	Griffin	15-16	9(C)		
+20344	104	Advisory	9993	19	104133	Montgomery	15-16	9(C)		
+20141	104	Advisory	9993	20	104011	DeBoi	15-16	9(C)		
+20345	104	Advisory	9993	21	104031	Kelly	15-16	9(C)		
+20347	104	Advisory	9993	22	104016	Gavin	15-16	9(C)		
+20348	104	Advisory	9993	23	104128	Anderson	15-16	9(C)		
+20349	104	Advisory	9993	24	104131	Moretti	15-16	9(C)		
+20350	104	Advisory	9993	25	104042	Osterman	15-16	9(C)		
+20351	104	Advisory	9993	26	104150	Martinez	15-16	9(C)		
+20352	104	Advisory	9993	27	104132	Widelock	15-16	9(C)		
+20353	104	Advisory	9993	28	104178	Lentini	15-16	9(C)		
+20354	104	Advisory	9993	29	104148	Ward	15-16	9(C)		
+20355	104	Advisory	9993	30	104118	Palmer	15-16	9(C)		
+20356	104	Advisory	9993	31	104117	Pembleton	15-16	9(C)		
+20446	104	Advisory	9993	34	104400	Gatti	15-16	9(C)		
+20358	104	Advisory	9993	35	104116	Maltzman	15-16	9(C)		
+20359	104	Advisory	9993	36	104044	Roubinian	15-16	9(C)		
+20360	104	Advisory	9993	37	104164	Calmels	15-16	9(C)		
+20239	104	Advisory	9993	50	104170	Shaw	15-16	9(C)		
+20294	104	Advisory	9993	51	104052	Walsh	15-16	9(C)		
+20483	104	Advisory	9993	52	104033	Kniesche	15-16	9(C)		
+20445	104	Advisory	9993	53	104064	Longo	15-16	9(C)		
+20346	104	Advisory	9993	212	104134	Brittonsmith	15-16	9(C)		
+20382	104	Opportunities/SR	9995	3	104092	Beales	15-16	10(D) 11(E)		
+20389	104	Opportunities/SR	9995	4	104031	Kelly	15-16	10(D) 11(E)		
+20390	104	Opportunities/SR	9995	8	103092	Fox	15-16	10(D) 11(E)		
+20391	104	Opportunities/SR	9995	9	104163	Bridges	15-16	10(D) 11(E)		
+20218	104	Opportunities/SR	9995	11	104048	Klima	15-16	10(D) 11(E)		
+20362	104	Opportunities/SR	9995	12	104161	Wells	15-16	10(D) 11(E)		
+20363	104	Opportunities/SR	9995	13	104050	Karlin	15-16	10(D) 11(E)		
+20364	104	Opportunities/SR	9995	14	104021	Goetz	15-16	10(D) 11(E)		
+20365	104	Opportunities/SR	9995	15	104025	Hettleman	15-16	10(D) 11(E)		
+20200	104	Opportunities/SR	9995	16	103152	Carroll	15-16	10(D) 11(E)		
+20366	104	Opportunities/SR	9995	17	104130	Canin	15-16	10(D) 11(E)		
+20367	104	Opportunities/SR	9995	18	104023	Griffin	15-16	10(D) 11(E)		
+20368	104	Opportunities/SR	9995	19	104133	Montgomery	15-16	10(D) 11(E)		
+20371	104	Opportunities/SR	9995	20	104011	DeBoi	15-16	10(D) 11(E)		
+20372	104	Opportunities/SR	9995	21	104102	Gillespie	15-16	10(D) 11(E)		
+20374	104	Opportunities/SR	9995	22	104016	Gavin	15-16	10(D) 11(E)		
+20375	104	Opportunities/SR	9995	23	104128	Anderson	15-16	10(D) 11(E)		
+20376	104	Opportunities/SR	9995	24	104131	Moretti	15-16	10(D) 11(E)		
+20377	104	Opportunities/SR	9995	25	104042	Osterman	15-16	10(D) 11(E)		
+20378	104	Opportunities/SR	9995	26	104150	Martinez	15-16	10(D) 11(E)		
+20379	104	Opportunities/SR	9995	27	104132	Widelock	15-16	10(D) 11(E)		
+20380	104	Opportunities/SR	9995	28	104178	Lentini	15-16	10(D) 11(E)		
+20381	104	Opportunities/SR	9995	29	104148	Ward	15-16	10(D) 11(E)		
+20383	104	Opportunities/SR	9995	30	104118	Palmer	15-16	10(D) 11(E)		
+20384	104	Opportunities/SR	9995	31	104117	Pembleton	15-16	10(D) 11(E)		
+20385	104	Opportunities/SR	9995	33	104065	Whitehouse	15-16	10(D) 11(E)		
+20441	104	Opportunities/SR	9995	34	103001	Stephens	15-16	10(D) 11(E)		
+20386	104	Opportunities/SR	9995	35	104116	Maltzman	15-16	10(D) 11(E)		
+20387	104	Opportunities/SR	9995	36	104044	Roubinian	15-16	10(D) 11(E)		
+20388	104	Opportunities/SR	9995	37	104164	Calmels	15-16	10(D) 11(E)		
+20336	104	Opportunities/SR	9995	51	104400	Gatti	15-16	10(D) 11(E)		
+20373	104	Opportunities/SR	9995	2121	104134	Brittonsmith	15-16	10(D) 11(E)		
+20392	104	Advisory/Nest	9996	1	104403	Torrano	15-16	9(C)		
+20393	104	Advisory/Nest	9996	2	104165	Chusid	15-16	9(C)		
+20394	104	Advisory/Nest	9996	5	104401	Bridgman	15-16	9(C)		
+20395	104	Advisory/Nest	9996	6	104122	Hagan	15-16	9(C)		
+20396	104	Advisory/Nest	9996	7	104162	Jelen	15-16	9(C)		
+20397	104	Advisory/Nest	9996	8	104387	Gallagher	15-16	9(C)		
+20398	104	Grade Level Grouping	9997	1	103001	Stephens	15-16	9(E)		
+20399	104	Grade Level Grouping	9997	5	104162	Jelen	15-16	9(E)		
+20400	104	Grade Level Grouping	9997	6	104050	Karlin	15-16	9(E)		
+20401	104	Grade Level Grouping	9997	7	104148	Ward	15-16	9(E)		
+20402	104	Grade Level Grouping	9997	8	104117	Pembleton	15-16	9(E)		
