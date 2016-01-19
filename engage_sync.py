@@ -9,70 +9,71 @@ DAYS_PAST = 7
 DAYS_UPCOMING = 7
 AUTOSEND = True
 
-STUDENT_HEADERS = [
-    'Student_Number',
-    'SchoolID',
-    'EntryDate',
-    'ExitDate',
-    'First_Name',
-    'Middle_Name',
-    'Last_Name',
-    'Gender',
-    'Grade_Level',
-    'Network_ID',
-    'Mother_First',
-    'Mother',
-    'Mother_Email',
-    'Father_First',
-    'Father',
-    'Father_Email'
-]
+STUDENT_HEADERS = [s.strip() for s in '''
+Student_Number
+SchoolID
+EntryDate
+ExitDate
+First_Name
+Middle_Name
+Last_Name
+Gender
+Grade_Level
+Network_ID
+Mother_First
+Mother
+Mother_Email
+Father_First
+Father
+Father_Email
+'''.split('\n')[1:-1]]
 
-TEACHER_HEADERS = [
-    'TeacherNumber',
-    'First_Name',
-    'Last_Name',
-    'SchoolID',
-    'Email_Addr',
-    'Status',
-    'StaffStatus',
-    'CA_SEID'
-]
 
-COURSE_HEADERS = [
-    'SchoolID',
-    'Course_Name',
-    'Course_Number',
-    'Alt_Course_Number',
-    'Code'
-]
+TEACHER_HEADERS = [s.strip() for s in '''
+TeacherNumber
+First_Name
+Last_Name
+SchoolID
+Email_Addr
+Status
+StaffStatus
+CA_SEID
+'''.split('\n')[1:-1]]
 
-SECTION_HEADERS = [
-    'SchoolID',
-    'Course_Number',
-    'Section_Number',
-    'TermID',
-    '[13]Abbreviation',
-    '[13]FirstDay',
-    '[13]LastDay',
-    'Expression',
-    '[05]TeacherNumber'
-]
+COURSE_HEADERS = [s.strip() for s in '''
+SchoolID
+Course_Name
+Course_Number
+Alt_Course_Number
+Code
+'''.split('\n')[1:-1]]
 
-CC_HEADERS = [
-    'Course_Number',
-    'Section_Number',
-    'SchoolID',
-    'TermID',
-    'DateEnrolled',
-    'DateLeft',
-    'Expression',
-    '[01]Student_Number',
-    '[01]First_Name',
-    '[01]Last_Name',
-    '[05]TeacherNumber',
-    '[05]Last_Name'
-]
+SECTION_HEADERS = [s.strip() for s in '''
+SchoolID
+Course_Number
+Section_Number
+TermID
+[13]Abbreviation
+[13]FirstDay
+[13]LastDay
+Expression
+[05]TeacherNumber
+'''.split('\n')[1:-1]]
+
+CC_HEADERS = [s.strip() for s in '''
+Course_Number
+Section_Number
+SchoolID
+TermID
+DateEnrolled
+DateLeft
+Expression
+[01]Student_Number
+[01]First_Name
+[01]Last_Name
+[05]TeacherNumber
+[05]Last_Name
+'''.split('\n')[1:-1]]
 
 class EngageUploader(object):
     def __init__(self, source_dir=None, output_dir=None, autosend=False, effective_date=datetime.date.today()):

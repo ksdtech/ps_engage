@@ -1,3 +1,14 @@
+ps_engage
+=========
+File processor for Edline (classes and rosters).
+
+Installation
+------------
+Currently running on a Windows server with Python 2.7 and python-dateutil package.
+Copy "source/section-codes.txt" to the SFTP source directory before running edline.bat
+batch file.
+
+
 Usage
 -----
 
