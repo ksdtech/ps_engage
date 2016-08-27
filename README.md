@@ -21,6 +21,7 @@ There are 7 input files required
 
 1. Export Student records into source/students.txt with following fields
 
+```
 Student_Number
 SchoolID
 EntryDate
@@ -37,25 +38,31 @@ Mother_Email
 Father_First
 Father
 Father_Email
+```
 
 2. Export Teacher records into source/teachers.txt with following fields
 
+```
 TeacherNumber
 First_Name
 Last_Name
 SchoolID
 Email_Addr
+```
 
 3. Export Course records into source/courses.txt with following fields
 
+```
 SchoolID
 Course_Name
 Course_Number
 Alt_Course_Number
 Code
+```
 
 4. Export Section records into source/sections.txt with following fields
 
+```
 SchoolID
 Course_Number
 Section_Number
@@ -65,9 +72,11 @@ TermID
 [13]LastDay
 Expression
 [05]TeacherNumber
+```
 
 5. Export CC records into source/cc.txt with following fields
 
+```
 Course_Number
 Section_Number
 SchoolID
@@ -80,29 +89,28 @@ Expression
 [01]Last_Name
 [05]TeacherNumber
 [05]Last_Name
+```
 
-6. Create source/codes.txt with columns
+6. (Annually) Export Section records into source/section-codes.txt with columns
 
+```
+ID
 SchoolID
-Course_Name
+[Courses]Course_Name
 Course_Number
-Teacher_Id
-Teacher_Name
-Code
+Section_Number
+[Teachers]TeacherNumber
+[Teachers]Last_Name
+[Terms]Abbreviation
+Expression
+```
 
-Example:
+Then add two more columns:
 
-SchoolID	Course_Name	Course_Number	Teacher_Id	Teacher_Name	Code
-104	Academic Workshop 	9971	T104128	Anderson	AWKS-AND
+```
+Edline_Class_ID
+Edline_Class_Name
+```
 
-7. Create source/edline\_classes.txt with columns
-
-SchoolID
-Code (Edline ClassID)
-
-Example:
-
-Code  ClassID
-104   AWKS-HET
-
-
+and map each section that has a corresponding Edline Class, filling in
+the Class ID and Class Name as they appear in the list of classes in Edline.
