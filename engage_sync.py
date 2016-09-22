@@ -228,7 +228,7 @@ class EngageUploader(object):
         
     def writeStudentsFile(self):
         with open(os.path.join(self.output_dir, 'students.csv'), 'w') as f:
-            w = csv.writer(f, dialect='excel', lineterminator='\r\n')
+            w = csv.writer(f, dialect='excel')
             w.writerow(['ID', 'LastName', 'FirstName', 'GradeLevel', 'SchoolId'])
             for student_id, student_data in self.students.iteritems():
                 school_id = student_data['SchoolID']
@@ -239,7 +239,7 @@ class EngageUploader(object):
                 
     def writeStudentContactsFile(self):
         with open(os.path.join(self.output_dir, 'contacts.csv'), 'w') as f:
-            w = csv.writer(f, dialect='excel', lineterminator='\r\n')
+            w = csv.writer(f, dialect='excel')
             w.writerow(['SchoolID','UserID','LastName','FirstName',
                 'Email','Email2','Email3','Email4',
                 'ParentEmail','ParentEmail2','ParentEmail3','ParentEmail4',
@@ -251,7 +251,7 @@ class EngageUploader(object):
                 first_name = student_data['First_Name']
                 student_email = student_data['Network_ID']
                 if student_email:
-                    student_email += '@kentstudents.org'
+                    student_email += '@kentfieldschools.org'
                 mother_email = student_data['Mother_Email']
                 father_email = student_data['Father_Email']
                 w.writerow([school_id, student_id, last_name, first_name,
@@ -263,7 +263,7 @@ class EngageUploader(object):
     def writeClassesFile(self):
         seen_classes = { }
         with open(os.path.join(self.output_dir, 'classes.csv'), 'w')  as f:
-            w = csv.writer(f, dialect='excel', lineterminator='\r\n')
+            w = csv.writer(f, dialect='excel')
             w.writerow(['ClassID', 'Class Name', 'TeacherID', 'SchoolId'])
             for class_id in self.classes:
                 class_name, teacher_id, school_id = self.classes[class_id]
@@ -271,7 +271,7 @@ class EngageUploader(object):
 
     def writeSchedulesFile(self):
         with open(os.path.join(self.output_dir, 'schedules.csv'), 'w')  as f:
-            w = csv.writer(f, dialect='excel', lineterminator='\r\n')
+            w = csv.writer(f, dialect='excel')
             w.writerow(['ClassID', 'StudentID', 'SchoolId'])
             seen = dict()
             for enrollment_id, enrollment_data in self.enrollments.iteritems():
