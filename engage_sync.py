@@ -9,6 +9,20 @@ DAYS_PAST = 7
 DAYS_UPCOMING = 7
 AUTOSEND = True
 
+SECTION_CODES_HEADERS = [s.strip() for s in '''
+ID
+SchoolID
+[Courses]Course_Name
+[Teachers]Last_Name
+Edline_Class_ID
+Edline_Class_Name
+Course_Number
+Section_Number
+[Teachers]TeacherNumber
+[Terms]Abbreviation
+Expression
+'''.split('\n')[1:-1]]
+
 STUDENT_HEADERS = [s.strip() for s in '''
 Student_Number
 SchoolID
@@ -27,7 +41,6 @@ Father_First
 Father
 Father_Email
 '''.split('\n')[1:-1]]
-
 
 TEACHER_HEADERS = [s.strip() for s in '''
 TeacherNumber
@@ -98,7 +111,7 @@ class EngageUploader(object):
         self.loadTeachers('kent')
         self.loadSections('kent')
         self.loadEnrollments()
-        
+
     def excludeFromEnrollment(self, school_class_id):
         for ex in DO_NOT_ENROLL:
             if ex == school_class_id:
@@ -108,8 +121,8 @@ class EngageUploader(object):
                 test_school = ex[0:-2]
                 if school_id == test_school:
                     return True
-        return False    
-        
+        return False
+
     def getEdlineClassInfo(self, school_id, course_number, section_number):
         class_id = ''
         class_name = ''
@@ -183,7 +196,7 @@ class EngageUploader(object):
                         print "section %s.%s (%s): teacher %s is not active" % (course_number, section_number, school_id, teacher_id)
                 else:
                     print "section %s.%s (%s): missing teacher %s" % (course_number, section_number, school_id, teacher_id)
-                
+
     def loadEnrollments(self):
         with open(os.path.join(self.source_dir, 'cc.txt')) as f:
             fieldnames = None if not self.autosend else CC_HEADERS
@@ -201,7 +214,7 @@ class EngageUploader(object):
                         teacher_id = 'T' + row['[05]TeacherNumber']
                         enrollment_id = '.'.join((school_id, class_id, student_id, course_number, section_number, teacher_id))
                         self.enrollments[enrollment_id] = row
-                        
+
     def dumpActiveEnrollments(self):
         f = sys.stdout
         w = csv.writer(f, dialect='excel-tab', lineterminator='\n')
@@ -213,7 +226,7 @@ class EngageUploader(object):
             section_id = '.'.join((school_id, course_number, section_number))
             section_data = self.sections[section_id]
             term = section_data['[13]Abbreviation']
-            w.writerow([course_name, course_number, section_number, teacher_id, teacher_name, class_id, student_id])        
+            w.writerow([course_name, course_number, section_number, teacher_id, teacher_name, class_id, student_id])
 
     def writeTeachersFile(self):
         with open(os.path.join(self.output_dir, 'teachers.csv'), 'w') as f:
@@ -224,8 +237,8 @@ class EngageUploader(object):
                     school_id = teacher_data['SchoolID']
                     last_name = teacher_data['Last_Name']
                     first_name = teacher_data['First_Name']
-                    w.writerow([teacher_id, last_name, first_name, '', school_id])        
-        
+                    w.writerow([teacher_id, last_name, first_name, '', school_id])
+
     def writeStudentsFile(self):
         with open(os.path.join(self.output_dir, 'students.csv'), 'w') as f:
             w = csv.writer(f, dialect='excel')
@@ -235,8 +248,8 @@ class EngageUploader(object):
                 last_name = student_data['Last_Name']
                 first_name = student_data['First_Name']
                 grade_level = student_data['Grade_Level']
-                w.writerow([student_id, last_name, first_name, grade_level, school_id])        
-                
+                w.writerow([student_id, last_name, first_name, grade_level, school_id])
+
     def writeStudentContactsFile(self):
         with open(os.path.join(self.output_dir, 'contacts.csv'), 'w') as f:
             w = csv.writer(f, dialect='excel')
@@ -259,7 +272,7 @@ class EngageUploader(object):
                     mother_email, father_email, '', '',
                     '', '', '', '',
                     '', '', '', '' ])
-            
+
     def writeClassesFile(self):
         seen_classes = { }
         with open(os.path.join(self.output_dir, 'classes.csv'), 'w')  as f:
@@ -288,7 +301,7 @@ if __name__ == '__main__':
         help='use autosend files (no header line)')
     parser.add_argument('-s', '--source_dir', help='source directory')
     parser.add_argument('-o', '--output_dir', help='output directory')
-    parser.add_argument('-d', '--dump', action='store_true', 
+    parser.add_argument('-d', '--dump', action='store_true',
         help='dump courses and sections')
     args = parser.parse_args()
 
@@ -302,4 +315,3 @@ if __name__ == '__main__':
         uploader.writeStudentsFile()
         uploader.writeStudentContactsFile()
         uploader.writeSchedulesFile()
-

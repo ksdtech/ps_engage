@@ -352,7 +352,7 @@ ID	SchoolID	[Courses]Course_Name	[Teachers]Last_Name	Edline_Class_ID	Edline_Clas
 21034	104	Opportunities/SR	Klima			9995	712	104048	16-17	9(C-D)
 21031	104	Advisory	Kniesche			9993	692	104033	16-17	9(B)
 21002	104	Advisory	Lentini			9993	628	104178	16-17	9(B)
-20975	104	Mathletes	Lentini			9895	28	104178	16-17	8(B)
+20975	104	Mathletes	Lentini	MLTE	Mathletes	9895	28	104178	16-17	8(B)
 21049	104	Opportunities/SR	Lentini			9995	628	104178	16-17	9(C-D)
 21032	104	Advisory	Longo			9993	821	104064	16-17	9(B)
 21055	104	Opportunities/SR	Maltzman			9995	735	104116	16-17	9(C-D)
